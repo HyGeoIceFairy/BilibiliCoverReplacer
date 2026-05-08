@@ -1,0 +1,30 @@
+# Bilibili Cover Replacer (B站封面替换插件)
+
+一个轻量级的 Manifest V3 浏览器扩展程序，用于在 Bilibili 的视频封面上无缝叠加自定义的透明背景图片。
+
+## 安装说明
+
+本项目目前为本地部署版本，请通过浏览器的“开发者模式”进行加载：
+
+1. 下载本项目的全部文件，并解压/放置在一个独立的文件夹中（例如命名为 `BilibiliCoverReplacer`）。
+2. 打开基于 Chromium 的浏览器（如 Google Chrome, Microsoft Edge 等）。
+3. 在地址栏输入 `chrome://extensions/` （Edge 浏览器输入 `edge://extensions/`）进入扩展程序管理页面。
+4. 在页面右上角开启 **“开发者模式”** 的开关。
+5. 点击左上角的 **“加载已解压的扩展程序”**，选择你在第 1 步中准备好的文件夹。
+6. 加载成功后，打开或刷新 Bilibili 网页即可看到效果。
+
+## 配置自定义素材库
+
+插件通过本地的 JSON 文件来管理你的图片链接。要替换为你自己的图片，请按照以下步骤操作：
+
+1. 在项目文件夹中找到并打开 `images.json` 文件。
+2. 将 `"images"` 数组中的 URL 替换为你自己的图片直链（必须是可直接访问的图片地址，推荐使用背景透明的 PNG 格式）。
+   
+   *配置示例：*
+   ```json
+   {
+     "images": [
+       "https://your-image-host.com/your-transparent-image-1.png",
+       "https://your-image-host.com/your-transparent-image-2.png"
+     ]
+   }
