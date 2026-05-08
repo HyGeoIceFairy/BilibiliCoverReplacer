@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 240px;
+            padding: 12px;
+            font-family: system-ui, -apple-system, sans-serif;
+            color: #333;
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 16px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        .setting-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 12px;
+            background-color: #00aeec;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #0098ce;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>覆盖区域设置</h3>
+
+    <div class="setting-item">
+        <label for="homeNew">新版主页卡片</label>
+        <input type="checkbox" id="homeNew">
+    </div>
+
+    <div class="setting-item">
+        <label for="searchOld">搜索及旧版卡片</label>
+        <input type="checkbox" id="searchOld">
+    </div>
+
+    <div class="setting-item">
+        <label for="dynamic">动态常规图片</label>
+        <input type="checkbox" id="dynamic">
+    </div>
+
+    <div class="setting-item">
+        <label for="dynamicLightbox">动态放大预览</label>
+        <input type="checkbox" id="dynamicLightbox">
+    </div>
+
+    <button id="saveBtn">保存并刷新页面</button>
+
+    <!-- 引入界面交互逻辑 -->
+    <script src="popup.js"></script>
+</body>
+
+</html>

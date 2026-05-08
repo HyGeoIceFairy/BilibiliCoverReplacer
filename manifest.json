@@ -1,8 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Bilibili Cover Replacer",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "在B站视频封面上叠加自定义背景透明图片的浏览器插件。",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
     {
       "matches": [
